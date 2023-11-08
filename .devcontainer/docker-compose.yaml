@@ -17,6 +17,8 @@ services:
     environment:
       MONGO_INITDB_DATABASE: zyphox
       MONGO_REPLICA_SET_NAME: rs0
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
     volumes:
       - mongo-data:/data/db
     restart: always
