@@ -10,17 +10,15 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker:/var/lib/docker
-    network_mode: service:mongodb
   mongodb:
     image: mongo:latest
     container_name: mongodb
     restart: always
     volumes:
       - mongo-data:/data/db
-      - ./mongodb/rs-initiate.js:/docker-entrypoint-initdb.d/rs-initiate.js
+      - ../..:/workspaces
     ports:
       - 27017:27017
-    command: ["--replSet", "dbrs", "--bind_ip_all"]
 
 volumes:
   mongo-data:
