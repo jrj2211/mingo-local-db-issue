@@ -17,7 +17,7 @@ services:
     restart: always
     volumes:
       - mongo-data:/data/db
-      - ./.devcontainer/mongodb/rs-initiate.js:/docker-entrypoint-initdb.d/rs-initiate.js
+      - ./mongodb/rs-initiate.js:/docker-entrypoint-initdb.d/rs-initiate.js
     ports:
       - 27017:27017
     command: ["--replSet", "dbrs", "--bind_ip_all"]
