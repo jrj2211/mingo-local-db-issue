@@ -14,7 +14,6 @@ services:
     hostname: mongodb
     image: mongo:latest
     environment:
-      MONGO_INITDB_DATABASE: zyphox
       MONGO_REPLICA_SET_NAME: rs0
     volumes:
       - mongo-data:/data/db
