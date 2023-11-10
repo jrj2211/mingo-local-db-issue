@@ -2,9 +2,6 @@
   "name": "mongo-test",
   "dockerComposeFile": "docker-compose.yaml",
   "service": "app",
-  "workspaceFolder": "/workspace",
   "forwardPorts": [27017],
-  "remoteEnv": {
-    "HOST_PROJECT_PATH": "${localWorkspaceFolder}"
-  }
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
 }
